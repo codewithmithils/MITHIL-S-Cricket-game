@@ -1,0 +1,158 @@
+/* simple student-style CSS */
+
+/* page background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e6f2ff;
+  /* light blue */
+  color: #111;
+}
+
+/* main container */
+.container {
+  width: 85%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 18px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* header */
+header {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* scoreboard */
+#scoreboard {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.team1,
+.team2 {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+}
+
+.team1 {
+  background: #2b7de9;
+}
+
+/* blue */
+.team2 {
+  background: #f59e0b;
+}
+
+/* orange */
+.team1 h2,
+.team2 h2 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.team1 p,
+.team2 p {
+  margin: 6px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* player stats */
+#player-stats {
+  margin-top: 16px;
+  padding: 12px;
+  background: #fff6d6;
+  /* pale yellow */
+  border-radius: 8px;
+}
+
+/* commentary */
+#commentary {
+  margin-top: 16px;
+  padding: 12px;
+  background: #dff7e6;
+  /* pale green */
+  border-radius: 8px;
+}
+
+#commentary p {
+  margin: 0;
+}
+
+/* game controls */
+#game-controls {
+  text-align: center;
+  margin-top: 18px;
+}
+
+#game-controls button {
+  padding: 10px 18px;
+  margin: 6px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#hit-button {
+  background: #16a34a;
+}
+
+/* green */
+#bowl-button {
+  background: #0ea5e9;
+}
+
+/* blue */
+#reset-button {
+  background: #6b7280;
+}
+
+/* gray */
+
+/* top controls (overs select) */
+.controls-top {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.controls-top label {
+  font-size: 14px;
+}
+
+.controls-top select {
+  padding: 6px;
+  border-radius: 6px;
+}
+
+/* small responsive tweak */
+@media (max-width: 700px) {
+  #scoreboard {
+    flex-direction: column;
+  }
+
+  .controls-top {
+    justify-content: space-between;
+  }
+
+  #game-controls button {
+    width: 40%;
+  }
+}

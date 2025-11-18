@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Cricket Game</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Interactive Cricket Game</h1>
+
+    </header>
+
+    <!-- SETTINGS / INFO -->
+    <div class="controls-top">
+      <label>
+        Overs:
+        <select id="overs-select">
+          <option value="1">1</option>
+          <option value="3">3</option>
+          <option value="5" selected>5</option>
+        </select>
+      </label>
+
+      <label>
+        Difficulty:
+        <select id="difficulty-select">
+          <option value="easy">Easy</option>
+          <option value="normal" selected>Normal</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+
+      <button id="reset-button" class="small">Reset Game</button>
+    </div>
+
+    <!-- SCOREBOARD -->
+    <section id="scoreboard" class="card">
+      <div class="team team1">
+        <h2>Team 1</h2>
+        <p class="big">Score: <span id="team1-score">0</span> / <span id="team1-wickets">0</span> wkts</p>
+        <p class="muted">Overs: <span id="team1-overs">0.0</span></p>
+      </div>
+
+      <div class="team team2">
+        <h2>Team 2</h2>
+        <p class="big">Score: <span id="team2-score">0</span> / <span id="team2-wickets">0</span> wkts</p>
+        <p class="muted">Overs: <span id="team2-overs">0.0</span></p>
+      </div>
+    </section>
+
+    <!-- PLAYER STATS -->
+    <section id="player-stats" class="card">
+      <h2>Player Statistics</h2>
+      <div id="player-list" class="player-list">
+        <!-- dynamic small list -->
+        <p class="muted">No details yet — play to populate.</p>
+      </div>
+    </section>
+
+    <!-- COMMENTARY -->
+    <section id="commentary" class="card">
+      <h2>Commentary</h2>
+      <div id="commentary-box" class="commentary-box">
+        <p id="commentary-text">Game starts — press Hit or Bowl.</p>
+      </div>
+    </section>
+
+    <!-- ARENA for small animations -->
+    <section class="card arena">
+      <div id="pitch">
+        <div id="ball" class="ball" aria-hidden="true"></div>
+        <div id="wicket" class="wicket" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ACTIONS -->
+    <section id="game-controls" class="card controls">
+      <button id="hit-button" class="action hit">Hit</button>
+      <button id="bowl-button" class="action bowl">Bowl</button>
+    </section>
+
+    <footer class="small muted">Cricket Project</footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
